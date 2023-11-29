@@ -1,0 +1,12 @@
+[docker]
+192.168.x.x
+
+[postgresql]
+192.168.x.x
+
+[redis]
+192.168.x.x
+
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
