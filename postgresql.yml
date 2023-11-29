@@ -1,0 +1,6 @@
+---
+- name: Update
+  hosts: docker
+  roles:
+  - common
+  - postgresql

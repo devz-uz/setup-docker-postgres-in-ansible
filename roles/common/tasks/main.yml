@@ -1,0 +1,32 @@
+---
+- name: Install aptitude
+  become: true
+  apt:
+    name: aptitude
+    state: latest
+    update_cache: true
+
+- name: Update cache
+  become: true
+  apt: 
+    update_cache=yes cache_valid_time=3600
+  tags:
+    - common
+
+- name: install required-tools
+  become: true
+  apt:
+    pkg:
+    - net-tools
+    - jq
+    - htop
+  tags:
+    - common
+
+- name: Set timezone to {{ timezone }}
+  become: true
+  timezone:
+    name: "{{ timezone }}"
+  tags: 
+    - common
+    

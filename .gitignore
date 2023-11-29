@@ -1,0 +1,4 @@
+ansible.cfg
+inventory/hosts.ini
+inventory/id_rsa
+inventory/id_rsa.pub
